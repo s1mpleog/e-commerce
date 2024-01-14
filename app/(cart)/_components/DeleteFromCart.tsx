@@ -13,7 +13,7 @@ export default function DeleteFromCart({ id }: any) {
   };
   return (
     <div className="flex items-end justify-end ml-auto">
-      <Button size='sm' onClick={() => deleteItem(id)}>Remove</Button>
+      <Button variant='ghost' size='sm' onClick={() => deleteItem(id)}>Remove</Button>
     </div>
   );
 }

@@ -41,15 +41,8 @@ export default async function CartPage() {
             </Link>
             <div className="lg:hidden flex flex-col lg:space-y-0 space-y-4 items-start justify-start">
               <div>
-                <p className="line-clamp-1 lg:max-w-[300px]">
-                  {item.product.title}
-                </p>
-                <p className="lg:block hidden">{item.quantity}</p>
-                <p className="lg:text-base text-sm">${item.product.price}</p>
-                <p className="lg:hidden inline-block">{item.quantity}</p>
-                <p className="lg:block hidden">{item.product.category}</p>
                 <div className="ml-0 lg:hidden flex">
-                  <DeleteFromCart id={item.id} />
+                  {/* <DeleteFromCart id={item.id} /> */}
                 </div>
               </div>
             </div>
@@ -62,7 +55,7 @@ export default async function CartPage() {
                 <p className="lg:text-base text-sm">${item.product.price}</p>
                 <p className="lg:hidden inline-block">{item.quantity}</p>
                 <p className="lg:block hidden">{item.product.category}</p>
-                <div className="lg:block hidden">
+                <div className="">
                   <DeleteFromCart id={item.id} />
                 </div>
           </div>

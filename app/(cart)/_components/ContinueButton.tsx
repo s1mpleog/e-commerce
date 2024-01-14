@@ -4,9 +4,7 @@ import axios from "axios";
 
 export default function ContinueButton() {
   const onCheckout = async () => {
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/checkout`
-    );
+    const response = await axios.post(`/api/checkout`);
 
     window.location = response.data.url;
   };

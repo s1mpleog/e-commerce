@@ -20,7 +20,7 @@ export default async function CartPage() {
   return (
     <div className="flex flex-col space-y-6 items-center justify-start">
       {items.length <= 0 && (
-        <p className="text-3xl font-bold my-20">
+        <p className="text-3xl font-bold my-20 lg:mx-0 mx-5">
           There is no items in your cart
         </p>
       )}
@@ -28,11 +28,11 @@ export default async function CartPage() {
         <div className="min-w-full lg:mx-0 mx-5" key={item.productId}>
           <div
             key={item.id}
-            className="flex border lg:mx-0 mx-5 lg:min-h-24 px-5 py-2 rounded-md items-center lg:justify-between space-x-6"
+            className="flex border lg:mx-0 mx-5 lg:min-h-24 px-5 py-2 rounded-md items-center lg:justify-between justify-start space-x-6"
           >
             <Link key={item.id} href={`/product/${item.productId}`}>
               <Image
-                className="rounded-md object-cover lg:min-h-max min-h-20"
+                className="rounded-md object-cover"
                 src={item.product.imageUrl}
                 width={100}
                 height={100}

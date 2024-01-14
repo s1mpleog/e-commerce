@@ -9,7 +9,8 @@ export default function Banner() {
         alt="banner"
         width={1200}
         height={400}
-        quality={100}
+        quality={80}
+        priority
       />
     </div>
   );

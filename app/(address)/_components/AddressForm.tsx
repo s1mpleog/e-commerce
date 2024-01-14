@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import * as z from "zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -39,6 +40,13 @@ export default function AddressForm({ initialData }: AddressFormProps) {
   const onSubmit = (values: z.infer<typeof AddressSchema>) => {
     AddressFormUpdate(values);
     // form.reset();
+  };
+  const onCheckout = async () => {
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/checkout`
+    );
+
+    window.location = response.data.url;
   };
   return (
     <div className="space-y-6 my-10">
@@ -140,6 +148,7 @@ export default function AddressForm({ initialData }: AddressFormProps) {
           </Button>
         </form>
       </Form>
+      <Button onClick={onCheckout}>checkout</Button>
     </div>
   );
 }

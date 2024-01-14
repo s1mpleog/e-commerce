@@ -22,7 +22,8 @@ export default async function ProductCard({}: ProductCardProps) {
                 alt={product.title}
                 width={250}
                 height={250}
-                quality={100}
+                quality={80}
+                priority
               />
               <div className="my-6">
                 <p className="line-clamp-2 font-medium">{product.title}</p>

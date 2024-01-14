@@ -24,6 +24,7 @@ export default async function SingleProduct({ id }: SingleProductProps) {
           width={400}
           height={400}
           quality={100}
+          priority
         />
       </div>
       <div className="space-y-14 max-w-[500px] mx-auto">

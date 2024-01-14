@@ -32,7 +32,7 @@ export default async function CartPage() {
           >
             <Link key={item.id} href={`/product/${item.productId}`}>
               <Image
-                className="rounded-md object-cover"
+                className="rounded-md object-cover lg:min-h-max min-h-20"
                 src={item.product.imageUrl}
                 width={100}
                 height={100}

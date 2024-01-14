@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import ContinueButton from "../_components/ContinueButton";
 
 export default async function CartPage() {
   const { userId } = auth();
@@ -59,9 +60,7 @@ export default async function CartPage() {
         </div>
       ))}
       {items.length > 0 && (
-        <Link href="/address" className="absolute right-5 bottom-4 max-w-[1200px] mx-auto">
-          <Button size="lg">Continue</Button>
-        </Link>
+        <ContinueButton />
       )}
     </div>
   );

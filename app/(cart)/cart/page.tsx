@@ -18,7 +18,7 @@ export default async function CartPage() {
     },
   });
   return (
-    <div className="flex flex-col space-y-6 items-center justify-start">
+    <div className="flex flex-col space-y-6 items-center justify-start overflow-x-hidden">
       {items.length <= 0 && (
         <p className="text-3xl font-bold my-20 lg:mx-0 mx-5">
           There is no items in your cart

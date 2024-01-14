@@ -11,5 +11,20 @@ export const AddProductSchema = z.object({
   imageUrl: z.string().min(1, {
     message: "Image Url required!",
   }),
-  description: z.string()
+  description: z.string(),
+});
+
+export const AddressSchema = z.object({
+  name: z.string().min(1, {
+    message: "name is required",
+  }),
+  address: z.string().min(3, {
+    message: "Address is required",
+  }),
+  email: z.string().min(1, {
+    message: "Email is required",
+  }),
+  zipCode: z.string().min(1, {
+    message: "Zip code is required",
+  }),
 });

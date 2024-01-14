@@ -61,5 +61,6 @@ model Address {
   address String @db.Text
   email   String @unique
   userId  String
+  zipCode  String
   users   User   @relation(fields: [userId], references: [id])
 }

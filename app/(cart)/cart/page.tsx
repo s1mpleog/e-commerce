@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import DeleteFromCart from "../_components/DeleteFromCart";
 import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs";
@@ -41,26 +42,27 @@ export default async function CartPage() {
             </Link>
             <div className="lg:hidden flex flex-col lg:space-y-0 space-y-4 items-start justify-start">
               <div>
-                <div className="ml-0 lg:hidden flex">
-                  {/* <DeleteFromCart id={item.id} /> */}
-                </div>
+                <div className="ml-0 lg:hidden flex"></div>
               </div>
             </div>
-            {/* desktop-design */}
-            
-                <p className="line-clamp-1 lg:max-w-[300px]">
-                  {item.product.title}
-                </p>
-                <p className="lg:block hidden">{item.quantity}</p>
-                <p className="lg:text-base text-sm">${item.product.price}</p>
-                <p className="lg:hidden inline-block">{item.quantity}</p>
-                <p className="lg:block hidden">{item.product.category}</p>
-                <div className="">
-                  <DeleteFromCart id={item.id} />
-                </div>
+            <p className="line-clamp-1 lg:max-w-[300px]">
+              {item.product.title}
+            </p>
+            <p className="lg:block hidden">{item.quantity}</p>
+            <p className="lg:text-base text-sm">${item.product.price}</p>
+            <p className="lg:hidden inline-block">{item.quantity}</p>
+            <p className="lg:block hidden">{item.product.category}</p>
+            <div className="">
+              <DeleteFromCart id={item.id} />
+            </div>
           </div>
         </div>
       ))}
+      {items.length > 0 && (
+        <Link href="/address" className="absolute right-5 bottom-4 max-w-[1200px] mx-auto">
+          <Button size="lg">Continue</Button>
+        </Link>
+      )}
     </div>
   );
 }

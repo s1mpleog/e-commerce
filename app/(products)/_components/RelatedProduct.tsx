@@ -33,6 +33,7 @@ export default async function RelatedProduct({ id }: RelatedProductProps) {
                 width={250}
                 height={250}
                 quality={100}
+                priority
               />
               <div className="my-6">
                 <p className="line-clamp-2 font-medium">{product.title}</p>
